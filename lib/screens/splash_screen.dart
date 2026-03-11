@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:healthetic_app/screens/login_screen.dart';
 import '../constants/colors.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -15,6 +16,9 @@ class _SplashScreenState extends State<SplashScreen> {
     // auto-navigate to login after 2s
     Future.delayed(const Duration(seconds: 2), () {
       if (mounted) {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => const LoginScreen()),
+        );
       }
     });
   }
